@@ -3,7 +3,7 @@
 
 # s4
 
-vscode language support for s4
+vscode language support for [s4](https://github.com/axetroy/s4)
 
 ![Screenshot](https://github.com/axetroy/vscode-s4/raw/master/screenshot.png)
 
