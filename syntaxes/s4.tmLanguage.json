@@ -1,0 +1,105 @@
+{
+  "information_for_contributors": ["s4 language file"],
+  "name": "s4",
+  "scopeName": "source.s4",
+  "patterns": [
+    {
+      "captures": {
+        "1": {
+          "name": "keyword.control.s4"
+        },
+        "2": {
+          "name": "keyword.control.s4"
+        },
+        "3": {
+          "name": "keyword.control.s4"
+        }
+      },
+      "match": "^\\s*\\b(?i:(CONNECT))\\b.*?\\b(?i:(WITH))\\s(?i:(PASSWORD|FILE))\\b.*?"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "keyword.control.s4"
+        },
+        "2": {
+          "name": "variable.parameter.s4"
+        }
+      },
+      "match": "^\\s*\\b(?i:(ENV))\\b(.+)\\s*(?i:(=))\\s*.*?"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "keyword.control.s4"
+        },
+        "2": {
+          "name": "variable.parameter.s4"
+        },
+        "6": {
+          "name": "variable.parameter.s4"
+        },
+        "7": {
+          "name": "keyword.other.s4"
+        }
+      },
+      "match": "^\\s*\\b(?i:(VAR))\\s*([^\\s]+)\\s*(?i:(<?=))\\s*(((\\$[^\\s]+):(local|remote))|(.*))?\\b"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "keyword.control.s4"
+        }
+      },
+      "match": "^\\s*\\b(?i:(CD|UPLOAD|DOWNLOAD|DELETE|COPY|MOVIE))\\b.+*?"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "keyword.control.s4"
+        },
+        "2": {
+          "name": "string.other.s4"
+        },
+        "3": {
+          "name": "constant.character.s4"
+        }
+      },
+      "match": "^\\s*\\b(?i:(COPY|MOVE))\\s+([^\\s]+)\\s*([^\\s]+)?"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "keyword.control.s4"
+        },
+        "2": {
+          "name": "keyword.control.s4"
+        }
+      },
+      "match": "^\\s*\\b(?i:(RUN))\\s"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "variable.parameter.s4"
+        }
+      },
+      "match": "\\s*{{\\s*([^\\s]+)\\s*}}\\s*"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "punctuation.whitespace.comment.leading.s4"
+        },
+        "2": {
+          "name": "comment.line.number-sign.s4"
+        },
+        "3": {
+          "name": "punctuation.definition.comment.s4"
+        }
+      },
+      "comment": "comment.line",
+      "match": "^(\\s*)((#).*$\\n?)"
+    }
+  ]
+}

@@ -1,21 +1,21 @@
 {
-  "name": "vscode-extension-boilerplate",
-  "displayName": "vscode extension boilerplate",
-  "description": "vscode extension boilerplate",
+  "name": "s4",
+  "displayName": "s4",
+  "description": "vscode language support for s4",
   "version": "0.1.0",
   "publisher": "axetroy",
   "engines": {
-    "vscode": "^1.21.0"
+    "vscode": "^1.40.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/axetroy/vscode-extension-boilerplate.git"
+    "url": "git+https://github.com/axetroy/vscode-s4.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/axetroy/vscode-extension-boilerplate/issues"
+    "url": "https://github.com/axetroy/vscode-s4/issues"
   },
-  "homepage": "https://github.com/axetroy/vscode-extension-boilerplate#readme",
+  "homepage": "https://github.com/axetroy/vscode-s4#readme",
   "keywords": [
     "schema",
     "json",
@@ -25,40 +25,25 @@
   "categories": [
     "Other"
   ],
-  "icon": "resources/icon.png",
-  "main": "./out/index",
-  "activationEvents": [
-    "onCommand:foo"
-  ],
   "contributes": {
-    "commands": [
+    "languages": [
       {
-        "command": "foo",
-        "title": "foo",
-        "icon": {
-          "dark": "resources/dark/moon.svg",
-          "light": "resources/light/moon.svg"
-        }
+        "id": "s4",
+        "extensions": [
+          ".s4"
+        ],
+        "filenames": [
+          "s4"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "s4",
+        "scopeName": "source.s4",
+        "path": "./syntaxes/s4.tmLanguage.json"
       }
     ]
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./ && npm run lint",
-    "watch": "tsc -watch -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "lint": "tslint -p ./ -c tslint.json",
-    "test": "npm run compile && node ./node_modules/vscode/bin/test",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
-  },
-  "devDependencies": {
-    "@types/mocha": "^5.2.7",
-    "@types/node": "^12.0.10",
-    "conventional-changelog-cli": "^2.0.21",
-    "tslint": "^5.18.0",
-    "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.5.2",
-    "vscode": "^1.1.35"
-  },
-  "dependencies": {}
+  }
 }
