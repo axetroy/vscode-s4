@@ -45,5 +45,8 @@
         "path": "./syntaxes/s4.tmLanguage.json"
       }
     ]
+  },
+  "scripts": {
+    "publish": "npx vsce publish"
   }
 }
